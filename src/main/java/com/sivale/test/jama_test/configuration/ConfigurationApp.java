@@ -11,12 +11,12 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @Configuration
-@EnableWebMvc
 @ComponentScan("com.sivale.test.jama_test")
 @Import({
 	RepoConfig.class,
 	SocialConfig.class,
-	SecurityConfig.class
+	SecurityConfig.class,
+	WebViewConfig.class
 })
 public class ConfigurationApp extends WebMvcConfigurerAdapter{
 
@@ -25,17 +25,20 @@ public class ConfigurationApp extends WebMvcConfigurerAdapter{
 	public ResourceBundleMessageSource getMessageSource() {
 		ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
 		messageSource.setDefaultEncoding("UTF-8");
-		messageSource.addBasenames("classpath:application");
+		messageSource.setUseCodeAsDefaultMessage(true);
+		messageSource.setFallbackToSystemLocale(true);
+//		messageSource.addBasenames("classpath:application");
+		messageSource.addBasenames("classpath:message");
 		return messageSource;
 	}
 	
-	@Override
-	public void addCorsMappings(CorsRegistry registry) {
-		registry.addMapping("/**")
-		.allowedOrigins("*")
-		.allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
-		.allowedHeaders("*")
-		.allowCredentials(true);
-//		.maxAge(MAX_AGE_SECS);
-	}
+//	@Override
+//	public void addCorsMappings(CorsRegistry registry) {
+//		registry.addMapping("/**")
+//		.allowedOrigins("*")
+//		.allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
+//		.allowedHeaders("*")
+//		.allowCredentials(true);
+////		.maxAge(MAX_AGE_SECS);
+//	}
 }

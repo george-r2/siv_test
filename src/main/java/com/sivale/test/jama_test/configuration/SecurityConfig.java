@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.WebSecurityConfigurer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -20,6 +21,7 @@ import com.sivale.test.jama_test.social.impl.SocialUserDetailsServiceImpl;
 import com.sivale.test.jama_test.social.impl.UserDetailsServiceImpl;
 
 @Configuration
+@EnableWebSecurity
 public class SecurityConfig extends  WebSecurityConfigurerAdapter  {
 	@Autowired
 	private UserDetailRepository userRepository;
