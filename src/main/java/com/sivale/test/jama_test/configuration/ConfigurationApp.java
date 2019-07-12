@@ -13,7 +13,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @Configuration
 @EnableWebMvc
 @ComponentScan("com.sivale.test.jama_test")
-@Import(com.sivale.test.jama_test.configuration.RepoConfig.class)
+@Import({
+	RepoConfig.class,
+	SocialConfig.class,
+	SecurityConfig.class
+})
 public class ConfigurationApp extends WebMvcConfigurerAdapter{
 
 	@Bean
