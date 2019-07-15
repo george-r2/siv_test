@@ -44,6 +44,44 @@ public class User {
  
 	public User() {}
 
+	public static Builder getBuilder() {
+		return new Builder();
+	}
+
+	//Builder para facilitar la creacion del objeto
+	public static class Builder {
+		private User user;
+		public Builder() {
+			user = new User();
+			user.role = Role.ROLE_USER;
+		}
+ 
+		public Builder email(String email) {
+			user.email = email;
+			return this;
+		}
+ 
+		public Builder firstName(String firstName) {
+			user.firstName = firstName;
+			return this;
+		}
+		public Builder lastName(String lastName) {
+			user.lastName = lastName;
+			return this;
+		}
+		public Builder password(String password) {
+			user.password = password;
+			return this;
+		}
+		public Builder signInProvider(SocialMediaService signInProvider) {
+			user.signInProvider = signInProvider;
+			return this;
+		}
+		public User build() {
+			return user;
+		}
+	}
+	
 	
 	public Long getId() {
 		return id;

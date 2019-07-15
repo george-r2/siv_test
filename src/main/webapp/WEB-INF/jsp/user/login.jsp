@@ -72,6 +72,12 @@
 </sec:authorize>
 <sec:authorize access="isAuthenticated()">
     <p>Ayuda</p>
+    <div class="row">
+       <div class="form-group col-lg-4">
+           <a href="${pageContext.request.contextPath}/logout">
+          Cerrar sesion</a>
+       </div>
+   </div>
 </sec:authorize>
 </body>
 </html>

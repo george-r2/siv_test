@@ -81,9 +81,10 @@ public class RepoConfig {
 	@Bean
 	public static PropertySourcesPlaceholderConfigurer getPropertySourcesPlaceholderConfigurer() {
 		PropertySourcesPlaceholderConfigurer configurer = new PropertySourcesPlaceholderConfigurer();
-		configurer.setIgnoreResourceNotFound(true);
-		configurer.setIgnoreUnresolvablePlaceholders(false);
-		configurer.setLocations(new ClassPathResource("classpath:application.properties"));
+//		configurer.setIgnoreResourceNotFound(true);
+//		configurer.setIgnoreUnresolvablePlaceholders(false);
+//		configurer.setLocations(new ClassPathResource("classpath:application.properties"));
 		return configurer;
 	}
+	
 }

@@ -20,14 +20,22 @@
 		<spring.version>4.3.18.RELEASE</spring.version>
 		<spring.secuiry.version>5.0.0.RELEASE</spring.secuiry.version>
 		<spring.data.jpa.version>1.4.3.RELEASE</spring.data.jpa.version>
-		
+		<spring.social>2.0.0.M</spring.social>
 		<hibernate.version>4.3.5.Final</hibernate.version>
 		<commons.dbcp.version>1.4</commons.dbcp.version>
 		<log4j.version>1.2.17</log4j.version>
 		<httpclient.version>4.5</httpclient.version>
 		<jackson.version>2.9.9 </jackson.version>
 		<servlet.version>3.1.0</servlet.version>
+		<javax.validation.api>2.0.0.Final</javax.validation.api>
 	</properties>
+
+	<repositories>
+		<repository>
+			<id>alfresco-public</id>
+			<url>https://artifacts.alfresco.com/nexus/content/groups/public</url>
+		</repository>
+	</repositories>
 
 	<dependencies>
 		<dependency>
@@ -184,6 +192,11 @@
 		<dependency>
 			<groupId>org.springframework.social</groupId>
 			<artifactId>spring-social-facebook</artifactId>
+			<version>3.0.0.M1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.social</groupId>
+			<artifactId>spring-social-twitter</artifactId>
 			<version>1.1.0.RELEASE</version>
 		</dependency>
 		 <!-- Spring Data JPA -->
@@ -210,6 +223,12 @@
 			<artifactId>standard</artifactId>
 			<version>1.1.2</version>
 			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>${javax.validation.api}</version>
 		</dependency>
 	</dependencies>
 

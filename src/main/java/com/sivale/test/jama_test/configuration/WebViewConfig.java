@@ -32,6 +32,7 @@ public class WebViewConfig extends WebMvcConfigurerAdapter {
 	@Bean
 	public SimpleMappingExceptionResolver exceptionResolver() {
 		SimpleMappingExceptionResolver exceptionResolver = new SimpleMappingExceptionResolver();
+		
 		Properties exceptionMappings = new Properties();
 	 
 		exceptionMappings.put("java.lang.Exception", "error/error");
