@@ -24,7 +24,7 @@
 		<hibernate.version>4.3.5.Final</hibernate.version>
 		<commons.dbcp.version>1.4</commons.dbcp.version>
 		<log4j.version>1.2.17</log4j.version>
-		<httpclient.version>4.5</httpclient.version>
+		<httpclient.version>4.5.13</httpclient.version>
 		<jackson.version>2.9.9 </jackson.version>
 		<servlet.version>3.1.0</servlet.version>
 		<javax.validation.api>2.0.0.Final</javax.validation.api>
@@ -163,7 +163,7 @@
 			<dependency>
 			    <groupId>org.apache.httpcomponents</groupId>
 			    <artifactId>httpclient</artifactId>
-			    <version>4.3.2</version>
+			    <version>4.5.13</version>
 			</dependency>
  
 		<!-- Spring Social -->
