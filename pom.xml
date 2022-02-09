@@ -21,7 +21,7 @@
 		<spring.secuiry.version>5.0.0.RELEASE</spring.secuiry.version>
 		<spring.data.jpa.version>1.4.3.RELEASE</spring.data.jpa.version>
 		<spring.social>2.0.0.M</spring.social>
-		<hibernate.version>4.3.5.Final</hibernate.version>
+		<hibernate.version>5.4.24.Final</hibernate.version>
 		<commons.dbcp.version>1.4</commons.dbcp.version>
 		<log4j.version>1.2.17</log4j.version>
 		<httpclient.version>4.5</httpclient.version>
