@@ -19,7 +19,7 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<spring.version>4.3.18.RELEASE</spring.version>
 		<spring.secuiry.version>5.0.0.RELEASE</spring.secuiry.version>
-		<spring.data.jpa.version>1.4.3.RELEASE</spring.data.jpa.version>
+		<spring.data.jpa.version>1.11.23.RELEASE</spring.data.jpa.version>
 		<spring.social>2.0.0.M</spring.social>
 		<hibernate.version>4.3.5.Final</hibernate.version>
 		<commons.dbcp.version>1.4</commons.dbcp.version>
